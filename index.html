@@ -42,7 +42,8 @@
                         ```
                     </script>
                 </section>
-                <section>
+                <section data-background-color="#ff0000">
+                    <h1>Fancy colours!</h1>
                     <pre><code data-trim data-noescape>
 def press(val):
     print("hello world")
@@ -50,13 +51,14 @@ def press(val):
                 </section>
 
                 <section>
+                    <h3>Some line-by-line transitions</h3>
                     <p class="fragment highlight-current-blue">blue only once</p>
                     <p class="fragment highlight-current-blue">blue only once</p>
                     <p class="fragment highlight-current-blue">blue only once</p>
                     <p class="fragment highlight-current-blue">blue only once</p>
-                    <p class="fragment highlight-current-blue">blue only once</p>
-                    <p class="fragment highlight-current-blue">blue only once</p>
-                    <p class="fragment highlight-current-blue">blue only once</p>
+                    <p class="fragment fade-up">blue only once</p>
+                    <p class="fragment fade-up">blue only once</p>
+                    <p class="fragment fade-up">blue only once</p>
                 </section>
 
 			</div>
@@ -69,6 +71,7 @@ def press(val):
 			// More info https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
 				history: true,
+                backgroundTransition: 'slide',
 
 				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
