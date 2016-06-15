@@ -25,12 +25,13 @@
 		<div class="reveal">
 			<div class="slides">
 				<section>
+                    <span class="menu-title" style="display: none">Title Page</span>
                     <h1>Welcome to appJar</h1>
                     <h4>The ultimate tool for creating GUIs in Python</h4>
                     <p><small>Created by Richard Jarvis, 2016</small></p>
                 </section>
                     
-				<section data-markdown>
+				<section data-markdown menu-hide>
                     <script type="text/template">
                         # Hello World
 
@@ -44,6 +45,7 @@
                 </section>
                 <section>
                     <section id="lesson_1">
+                        <span class="menu-title" style="display: none">Lesson 1 - Basic Pages</span>
                         <h1>Lesson 1</h2>
                         <h3>Basic pages...</h3>
                         <p>Slide down for more...</p>
@@ -64,6 +66,7 @@
                 </section>
                 <section>
                     <section id="lesson_2">
+                        <span class="menu-title" style="display: none">Lesson 2 - Basic Pages</span>
                         <h1>Lesson 2</h2>
                         <h3>Basic pages...</h3>
                         <p>Slide down for more...</p>
@@ -84,6 +87,7 @@
                 </section>
                 <section>
                     <section id="lesson_3">
+                        <span class="menu-title" style="display: none">Lesson 3 - Basic Pages</span>
                         <h1>Lesson 3</h2>
                         <h3>Basic pages...</h3>
                         <p>Slide down for more...</p>
@@ -104,6 +108,7 @@
                 </section>
                 <section>
                     <section id="lesson_4">
+                        <span class="menu-title" style="display: none">Lesson 4 - Basic Pages</span>
                         <h1>Lesson 4</h2>
                         <h3>Basic pages...</h3>
                         <p>Slide down for more...</p>
@@ -122,10 +127,11 @@
                         <h1>Some data here 4</h1>
                     </section>
                 </section>
+                <section>
+                <h1>About</h1>
+                <p>This slideset was created to accompany and support the Python GUI library available at <a href="http://appjar.info">appJar.info</a></p>
+                </section>
 			</div>
-                <div class="myFoot">
-                    <p><small><a href="http://www.appJar.info">appJar.info</a></small></p>
-                </div>
 		</div>
 
 		<script src="lib/js/head.min.js"></script>
@@ -142,11 +148,73 @@
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/notes/notes.js', async: true },
+                    { src: 'plugin/menu/menu.js' }, 
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
-            Reveal.configure({ slideNumber: 'c/t' });
+				],
+
+                // Menu stuff
+
+                menu: {
+                    // Specifies which side of the presentation the menu will 
+                    // be shown. Use 'left' or 'right'.
+                    side: 'left',
+
+                    // Add slide numbers to the titles in the slide list.
+                    // Use 'true' or format string (same as reveal.js slide numbers)
+                    numbers: false,
+
+                    // Specifies which slide elements will be used for generating
+                    // the slide titles in the menu. The default selects the first
+                    // heading element found in the slide, but you can specify any
+                    // valid css selector and the text from the first matching
+                    // element will be used.
+                    // Note: that a section data-menu-title attribute or an element
+                    // with a menu-title class will take precedence over this option
+                    titleSelector: 'h1, h2, h3, h4, h5, h6',
+
+                    // Hide slides from the menu that do not have a title.
+                    // Set to 'true' to only list slides with titles.
+                    hideMissingTitles: true,
+
+                    // Add markers to the slide titles to indicate the 
+                    // progress through the presentation
+                    markers: false,
+
+                    // Specify custom panels to be included in the menu, by
+                    // providing an array of objects with 'title', 'icon'
+                    // properties, and either a 'src' or 'content' property.
+                    custom: false,
+
+                    // Specifies the themes that will be available in the themes
+                    // menu panel. Set to 'false' to hide themes panel.
+                    themes: false,
+
+                    // Specifies if the transitions menu panel will be shown.
+                    transitions: false,
+
+                    // Adds a menu button to the slides to open the menu panel.
+                    // Set to 'false' to hide the button.
+                    openButton: true,
+
+                    // If 'true' allows the slide number in the presentation to
+                    // open the menu panel. The reveal.js slideNumber option must 
+                    // be displayed for this to take effect
+                    openSlideNumber: false,
+
+                    // hide vertical children
+                    skipVertical: true,
+
+                    // set a menu title
+                    menuTitle: 'Menu',
+
+                    // If true allows the user to open and navigate the menu using
+                    // the keyboard. Standard keyboard interaction with reveal
+                    // will be disabled while the menu is open.
+                    keyboard: true,
+
+                }, // end menu
+            });
             Reveal.configure({ backgroundTransition: 'zoom' });
-		</script>
-	</body>
+        </script>
+    </body>
 </html>
