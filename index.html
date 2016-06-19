@@ -22,8 +22,7 @@
 		</script>
         <style>
             p {text-align:left;}
-            ul {text-align:left;}
-            ol {text-align:left;}
+            ul, ol { text-align:left; }
         </style>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -40,9 +39,8 @@
 			<div class="slides">
 				<section>
                     <span class="menu-title" style="display: none">Title Page</span>
-                    <h1>Welcome to appJar</h1>
+                    <h1>appJar</h1>
                     <h4>The ultimate tool for creating GUIs in Python</h4>
-                    <p style="text-align:center;"><small>Created by Richard Jarvis, 2016</small></p>
                 </section>
                 
                 <section data-markdown menu-hide>
@@ -62,6 +60,9 @@
                         <span class="menu-title" style="display: none">Lesson 1 - Hello world</span>
                         <h1>Lesson 1</h1>
                         <h2>Hello World</h2>
+                    </section>
+                    <section>
+                        <h2>Objectives</h2>
                         <ol>
                             <li class="fragment">Know how to create an empty GUI</li>
                             <li class="fragment">Know how to add a widget, specifically a label, to a GUI</li>
@@ -134,6 +135,9 @@
                         <span class="menu-title" style="display: none">Lesson 2 - Hello world, again...</span>
                         <h1>Lesson 2</h1>
                         <h2>Hello World, again...</h2>
+                    </section>
+                    <section>
+                        <h2>Objectives</h2>
                         <ol>
                             <li class="fragment">Know how to add a button and associated function</li>
                             <li class="fragment">Know how to change a label's contents</li>
@@ -181,6 +185,9 @@
                         <span class="menu-title" style="display: none">Lesson 3 - Login form</span>
                         <h1>Lesson 3</h1>
                         <h2>Login form</h2>
+                    </section>
+                    <section>
+                        <h2>Objectives</h2>
                         <ol>
                                 <li class="fragment">Know how to add an entry field, capture & process input</li>
                                 <li class="fragment">Know how to add multiple buttons, and respond to them</li>
@@ -189,12 +196,12 @@
                     </section>
                     <section>
                         <h2>Getting started</h2>
-                        <p class="fragment">Start out by creating a GUI with:</p>
+                        <p class="fragment">Start out by creating a GUI with: </p>
                         <ul>
-                        <li class="fragment">    Title - Login</li>
-                        <li class="fragment">    BG - green</li>
-                        <li class="fragment">    Font – 16</li>
-                        <li class="fragment">    Label – Login Window (white FG)</li>
+                        <li class="fragment">Title - Login</li>
+                        <li class="fragment">BG - green</li>
+                        <li class="fragment">Font – 16</li>
+                        <li class="fragment">Label – Login Window (white FG)</li>
                         </ul>
                         <img alt="Image" class="fragment" src="img/lesson3/1.png">
                     </section>
@@ -263,12 +270,16 @@
                         <span class="menu-title" style="display: none">Lesson 4 - Light bulb moment?</span>
                         <h1>Lesson 4</h1>
                         <h2>Light bulb moment?</h2>
+                    </section>
+
+                    <section>
+                        <h2>Objectives</h2>
                         <ol>
                             <li class="fragment">Know how to add images</li>
                             <li class="fragment">Practice handling button clicks</li>
                         </ol>
-
                     </section>
+
                     <section>
                         <h2>Getting started</h2>
                         <p class="fragment">Start out by creating a GUI with:</p>
@@ -277,23 +288,26 @@
                             <li class="fragment">Two Buttons: On / Off</li>
                             <li class="fragment">One Button: Exit</li>
                         </ul>
-                        <p class="fragment">Remember to use addButtons for the first row and addButton for the second. They can both use the same function.</p>
                         <img alt="Image" class="fragment" src="img/lesson4/1.png">
+                        <p class="fragment">Remember to use addButtons for the first row and addButton for the second. They can both use the same function.</p>
                     </section>
+
                     <section>
-                        <h2></h2>
-                        <p class="fragment"></p>
+                        <h2>Stopping the GUI</h2>
+                        <p class="fragment">Code the function to stop the window if the Exit button is pressed.</p>
                         <img alt="Image" class="fragment" src="img/lesson4/2.png">
                     </section>
                     <section>
-                        <h2></h2>
-                        <p class="fragment"></p>
+                        <h2>Adding images</h2>
+                        <p class="fragment">Now we’re going to add an image, the library can only handle PNGs and GIFs at the moment.</p>
+                        <p class="fragment">This needs to be done before the buttons:</p>
                         <img alt="Image" class="fragment" src="img/lesson4/3.png">
+                        <p class="fragment">Make sure pupils have the two image files.</p>
                         <img alt="Image" class="fragment" src="img/lesson4/4.png">
                     </section>
                     <section>
-                        <h2></h2>
-                        <p class="fragment"></p>
+                        <h2>Changing images</h2>
+                        <p class="fragment">The final step is to code the buttons to change the image. When the on button is pressed, the image should change to a lit bulb. When the off button is pressed it should revert back</p>
                         <img alt="Image" class="fragment" src="img/lesson4/5.png">
                         <img alt="Image" class="fragment" src="img/lesson4/6.png">
                     </section>
@@ -313,21 +327,163 @@
                         <h1>Lesson 5</h1>
                         <h2>Magic 8 ball</h2>
                     </section>
+                    <section>
+                        <h2>Objectives</h2>
+                        <ol>
+                            <li class="fragment">Practice adding an image</li>
+                            <li class="fragment">Practice using dialogs for validation</li>
+                            <li class="fragment">Practice arrays and randomization</li>
+                            <li class="fragment">Know how to produce a sound</li>
+                            
+                        </ol>
+                    </section>
+                    <section>
+                        <h2>Getting started</h2>
+                        <p class="fragment">The next project is a simple magic-8 ball. This has 4 rows of widgets:</p>
+                        <ul>
+                            <li class="fragment">A text entry</li>
+                            <li class="fragment">2 buttons</li>
+                            <li class="fragment">An image</li>
+                            <li class="fragment">A Label</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Getting started</h2>
+                        <p class="fragment">So, we need to create a window (passing in a title, and also setting it so it cant be resized):</p>
+                        <img alt="Image" class="fragment" src="img/lesson5/1.png">
+                        <p class="fragment">Then, we add the 4 rows of widgets (this time giving separate functions for each button):</p>
+                        <img alt="Image" class="fragment" src="img/lesson5/2.png">
+                    </section>
+                    <section>
+                        <h2>Getting started</h2>
+                        <p class="fragment">Do a little configuration:</p>
+                        <img alt="Image" class="fragment" src="img/lesson5/3.png">
+                        <p class="fragment">And go...</p>
+                        <img alt="Image" class="fragment" src="img/lesson5/4.png">
+                    </section>
+                    <section>
+                        <img alt="Image" class="fragment" src="img/lesson5/5.png">
+                    </section>
+                    <section>
+                        <h2>Functions</h2>
+                        <p class="fragment">Each button will now need its own function, clear will do the same as last time:</p>
+                        <img alt="Image" class="fragment" src="img/lesson5/6.png">
+                    </section>
+                    <section>
+                        <h2>Answers & Sound</h2>
+                        <p class="fragment">Shake will check there is a question (show an error dialog if not) then pick a random answer to show in the label:</p>
+                        <p class="fragment">It can also play a sound – make sure you have the wav file (the library can only play wav files at the moment).</p>
+                        <img alt="Image" class="fragment" src="img/lesson5/7.png">
+                    </section>
+                    <section>
+                        <h2>Answers</h2>
+                        <p class="fragment">In order for the shake function to work, you’ll need an array of answers, and to have imported random.</p>
+                        <img alt="Image" class="fragment" src="img/lesson5/8.png">
+                    </section>
+                    <section>
+                        <h2>Extensions:</h2>
+                        <p class="fragment">Try to validate the question:</p>
+                        <ol>
+                            <li class="fragment">Should start with who/what/why/where/when/how</li>
+                            <li class="fragment">Should have at least 3 spaces</li>
+                        </ol>
+                    </section>
                 </section>
-
                 <section>
                     <section id="lesson_6">
                         <span class="menu-title" style="display: none">Lesson 6 - Simple calculator</span>
                         <h1>Lesson 6</h1>
                         <h2>Simple calculator</h2>
                     </section>
+                    <section>
+                        <h2>Objectives</h2>
+                        <ol>
+                            <li class="fragment">Know how to add widgets to specific rows/columns and use specific column spans</li>
+                            <li class="fragment">Know how to give more formatting to labels</li>
+                            <li class="fragment">Practice number validation and error handling</li>
+                            <li class="fragment">Practice mathematical operators</li>
+                        </ol>
+                    </section>
+                    <section>
+                        <h2>Getting started</h2>
+                        <p class="fragment">For the next program, we’re going to build a simple calculator. The user types in two numbers, and then clicks the button to get the answers….</p>
+                        <p class="fragment">The challenge this time is to have multiple widgets on one line. To achieve this, when we add a widget, we need to specify a row and column to put the widget in.</p>
+                        <p class="fragment">Looking at the layout, there are three rows, the top one has 4 widgets, the next row has one widget, and the bottom row has 3 widgets</p>
+                    </section>
+                    <section>
+                        <h2>Getting Started</h2>
+                        <img alt="Image" class="fragment" src="img/lesson6/1.png">
+                    </section>
+                    <section>
+                        <h2>Alignment</h2>
+                        <p class="fragment">The row and column are simply passed as parameters after the name of the items:</p>
+                        <img alt="Image" class="fragment" src="img/lesson6/2.png">
+                        <p class="fragment">We finish by putting focus in the first entry field, ready to type.</p>
+                    </section>
+                    <section>
+                        <h2>Formatting</h2>
+                        <p class="fragment">For the label, we want it to stretch across all 4 columns, so we put it in the first column (0) and pass a third number which sets how many columns to fill:</p>
+                        <img alt="Image" class="fragment" src="img/lesson6/3.png">
+                        <p class="fragment">We're also going to format the label:</p>
+                        <img alt="Image" class="fragment" src="img/lesson6/4.png">
+                    </section>
+                    <section>
+                        <h2>Buttons</h2>
+                        <p class="fragment">Finally, we add the buttons. We’re going to add them as a block, and again tell them to span 4 columns in the second row.</p>
+                        <img alt="Image" class="fragment" src="img/lesson6/5.png">
+                    </section>
+                    <section>
+                        <h2>Demo</h2>
+                        <p class="fragment">The program will display the result of all four basic calculations</p>
+                        <img alt="Image" class="fragment" src="img/lesson6/6.png">
+                    </section>
+                    <section>
+                        <h2></h2>
+                        <p class="fragment">It will also use a dialog to show the answers, if the user clicks the button.</p>
+                        <img alt="Image" class="fragment" src="img/lesson6/7.png">
+                    </section>
+                    <section>
+                        <h2>Demo</h2>
+                        <img alt="Image" class="fragment" src="img/lesson6/8.png">
+                    </section>
+                    <section>
+                        <h2>Error messsage</h2>
+                        <p class="fragment">Finally it will show an error message if the numbers are invalid.</p>
+                        <img alt="Image" class="fragment" src="img/lesson6/9.png">
+                    </section>
+                    <section>
+                        <h2>Extensions:</h2>
+                        <ol>
+                            <li class="fragment">Configure a function on first entry box: when enter is pressed – focus moves to the second entry box</li>
+                            <li class="fragment">Configure a function on second entry box: when enter is pressed – the form is submitted</li>
+                        </ol>
+                    </section>
                 </section>
 
+<!--
                 <section>
                     <section id="lesson_7">
                         <span class="menu-title" style="display: none">Lesson 7 - Loops</span>
                         <h1>Lesson 7</h1>
                         <h2>Loops</h2>
+                    </section>
+                    <section>
+                        <h2>Objectives</h2>
+                        <ol>
+                            <li class="fragment"></li>
+                        </ol>
+                    </section>
+                    <section>
+                        <h2></h2>
+                        <p class="fragment"></p>
+                        <img alt="Image" class="fragment" src="img/lesson4/7.png">
+                    </section>
+                    <section>
+                        <h2>Extensions:</h2>
+                        <ol>
+                            <li class="fragment"></li>
+                        </ol>
+                        <img alt="Image" class="fragment" src="img/lesson4/7.png">
                     </section>
                 </section>
 
@@ -337,6 +493,24 @@
                         <h1>Lesson 8</h1>
                         <h2>Noughts & Crosses</h2>
                     </section>
+                    <section>
+                        <h2>Objectives</h2>
+                        <ol>
+                            <li class="fragment"></li>
+                        </ol>
+                    </section>
+                    <section>
+                        <h2></h2>
+                        <p class="fragment"></p>
+                        <img alt="Image" class="fragment" src="img/lesson4/7.png">
+                    </section>
+                    <section>
+                        <h2>Extensions:</h2>
+                        <ol>
+                            <li class="fragment"></li>
+                        </ol>
+                        <img alt="Image" class="fragment" src="img/lesson4/7.png">
+                    </section>
                 </section>
 
                 <section>
@@ -344,6 +518,24 @@
                         <span class="menu-title" style="display: none">Lesson 9 - Advanced strings</span>
                         <h1>Lesson 9</h1>
                         <h2>Advanced strings</h2>
+                    </section>
+                    <section>
+                        <h2>Objectives</h2>
+                        <ol>
+                            <li class="fragment"></li>
+                        </ol>
+                    </section>
+                    <section>
+                        <h2></h2>
+                        <p class="fragment"></p>
+                        <img alt="Image" class="fragment" src="img/lesson4/7.png">
+                    </section>
+                    <section>
+                        <h2>Extensions:</h2>
+                        <ol>
+                            <li class="fragment"></li>
+                        </ol>
+                        <img alt="Image" class="fragment" src="img/lesson4/7.png">
                     </section>
                 </section>
 
@@ -353,8 +545,26 @@
                         <h1>Lesson 10</h1>
                         <h2>Advanced calculator</h2>
                     </section>
+                    <section>
+                        <h2>Objectives</h2>
+                        <ol>
+                            <li class="fragment"></li>
+                        </ol>
+                    </section>
+                    <section>
+                        <h2></h2>
+                        <p class="fragment"></p>
+                        <img alt="Image" class="fragment" src="img/lesson4/7.png">
+                    </section>
+                    <section>
+                        <h2>Extensions:</h2>
+                        <ol>
+                            <li class="fragment"></li>
+                        </ol>
+                        <img alt="Image" class="fragment" src="img/lesson4/7.png">
+                    </section>
                 </section>
-
+-->
                 <section>
                 <h1>About</h1>
                 <p>This slideset was created to accompany and support the Python GUI library available at <a href="http://appjar.info">appJar.info</a></p>
