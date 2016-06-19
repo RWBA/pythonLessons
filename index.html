@@ -20,7 +20,11 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
-        <style>p {text-align:left;}</style>
+        <style>
+            p {text-align:left;}
+            ul {text-align:left;}
+            ol {text-align:left;}
+        </style>
         <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -56,13 +60,15 @@
                 <section>
                     <section id="lesson_1">
                         <span class="menu-title" style="display: none">Lesson 1 - Hello world</span>
-                        <h1>Lesson 1</h2>
-                        <h2>Hello World</h3>
-                        <p class="fragment">1) Know how to create an empty GUI</p>
-                        <p class="fragment">2) Know how to add a widget, specifically a label, to a GUI</p>
-                        <p class="fragment">3) Know how to change the appearance of widgets</p>
+                        <h1>Lesson 1</h1>
+                        <h2>Hello World</h2>
+                        <ol>
+                            <li class="fragment">Know how to create an empty GUI</li>
+                            <li class="fragment">Know how to add a widget, specifically a label, to a GUI</li>
+                            <li class="fragment">Know how to change the appearance of widgets</li>
+                        </ol>
                     </section>
-                    <section id="lesson_1_start">
+                    <section>
                         <h2>Importing the library</h2>
                         <p class="fragment">First, we need to import the appJar library</p>
                         <img class="fragment" src="img/lesson1/1.png">
@@ -113,9 +119,11 @@
                     </section>
                     <section>
                         <h2>Extensions:</h2>
-                        <p class="fragment">Change the FG, BG & font of all the labels</p>
-                        <p class="fragment">Change the starting geometry</p>
-                        <p class="fragment">Change the resizability</p>
+                        <ol>
+                            <li class="fragment">Change the FG, BG & font of all the labels</li>
+                            <li class="fragment">Change the starting geometry</li>
+                            <li class="fragment">Change the resizability</li>
+                        </ol>
                         <img class="fragment" src="img/lesson1/12.png">
                     </section>
                 </section>
@@ -124,14 +132,16 @@
 
                     <section id="lesson_2">
                         <span class="menu-title" style="display: none">Lesson 2 - Hello world, again...</span>
-                        <h1>Lesson 2</h2>
-                        <h2>Hello World, again...</h3>
-                        <p class="fragment">1) Know how to add a button and associated function</p>
-                        <p class="fragment">2) Know how to change a label's contents</p>
-                        <p class="fragment">3) Know how to use global variables to keep track of stuff</p>
+                        <h1>Lesson 2</h1>
+                        <h2>Hello World, again...</h2>
+                        <ol>
+                            <li class="fragment">Know how to add a button and associated function</li>
+                            <li class="fragment">Know how to change a label's contents</li>
+                            <li class="fragment">Know how to use global variables to keep track of stuff</li>
+                        </ol>
                     </section>
 
-                    <section id="lesson_2_start">
+                    <section>
                         <h2>Adding a button</h2>
                         <p class="fragment">Let's add a button to the last GUI</p>
                         <p class="fragment">We need a <strong>function</strong> to call, when the button is pressed:</p>
@@ -156,8 +166,10 @@
                     </section>
                     <section>
                         <h2>Extensions:</h2>
-                        <p class="fragment">Get the background colour to change every time the button is pressed….</p>
-                        <p class="fragment">Do a countdown, close the window when it reaches 0</p>
+                        <ol>
+                            <li class="fragment">Get the background colour to change every time the button is pressed….</li>
+                            <li class="fragment">Do a countdown, close the window when it reaches 0</li>
+                        </ol>
                         <img class="fragment" src="img/lesson2/7.png">
                     </section>
                 </section>
@@ -167,16 +179,130 @@
                 <section>
                     <section id="lesson_3">
                         <span class="menu-title" style="display: none">Lesson 3 - Login form</span>
-                        <h1>Lesson 3</h2>
-                        <h2>Login form<h3>
+                        <h1>Lesson 3</h1>
+                        <h2>Login form</h2>
+                        <ol>
+                                <li class="fragment">Know how to add an entry field, capture & process input</li>
+                                <li class="fragment">Know how to add multiple buttons, and respond to them</li>
+                                <li class="fragment">Know how to show dialogs</li>
+                        </ol>
+                    </section>
+                    <section>
+                        <h2>Getting started</h2>
+                        <p class="fragment">Start out by creating a GUI with:</p>
+                        <ul>
+                        <li class="fragment">    Title - Login</li>
+                        <li class="fragment">    BG - green</li>
+                        <li class="fragment">    Font – 16</li>
+                        <li class="fragment">    Label – Login Window (white FG)</li>
+                        </ul>
+                        <img class="fragment" src="img/lesson3/1.png">
+                    </section>
+                    <section>
+                        <h2>Entry fields</h2>
+                        <p class="fragment">Now, let’s add two entry fields to capture the username & password:</p>
+                        
+                        <img class="fragment" src="img/lesson3/2.png">
+                        <img class="fragment" src="img/lesson3/3.png">
+                    </section>
+                    <section>
+                        <h2>Buttons</h2>
+                        <p class="fragment">Finally, let’s add a function for button presses , and 3 buttons:</p>
+                        
+                        <img class="fragment" src="img/lesson3/4.png">
+                        <p class="fragment">Note, this takes an list of Strings for the button names, but they all use the same function.</p>
+                        <img class="fragment" src="img/lesson3/5.png">
+                    </section>
+                    <section>
+                        <h2>Interactivity</h2>
+                        <p class="fragment">Now we simply need to code the function to respond to the buttons.</p>
+                        <p class="fragment">If the user presses CANCEL the GUI should close:</p>
+                        <img class="fragment" src="img/lesson3/6.png">
+                        <p class="fragment">If the user presses RESET, the entry fields should be cleared:</p>
+                        <img class="fragment" src="img/lesson3/7.png">
+                    </section>
+                    <section>
+                        <h2>Interactivity</h2>
+                        <img class="fragment" src="img/lesson3/8.png">
+                    </section>
+                    <section>
+                        <h2>Validation</h2>
+                        <p class="fragment">Otherwise, if the user presses SUBMIT we need to check if the username/password are correct and show the relevant message. Use the following code to get the data from the entry fields:</p>                        
+                        <img class="fragment" src="img/lesson3/9.png">
+                    </section>
+                    <section>
+                        <h2>Dialogs</h2>
+                        <p class="fragment">Then we can show either an infoBox or an errorBox:</p>
+                        <img class="fragment" src="img/lesson3/10.png">
+                        <p class="fragment">Depending on if the password if right or wrong…</p>
+                    </section>
+                    <section>
+                        <h2>Dialogs</h2>
+                        <img class="fragment" src="img/lesson3/11.png">
+                        <img class="fragment" src="img/lesson3/12.png">
+                    </section>
+                    <section>
+                        <h2>Privacy</h2>
+                        <p class="fragment">Finally, you might want to change the password box to show stars instead of the password - replace the earlier addEntryLabel line with:</p>
+                        <img class="fragment" src="img/lesson3/13.png">
+                        <img class="fragment" src="img/lesson3/14.png">
+                    </section>
+                    <section>
+                        <h2>Extensions:</h2>
+                        <ol>
+                            <li class="fragment">Add a status bar to show status…</li>
+                            <li class="fragment">Set the focus to the correct widget each time</li>
+                            <li class="fragment">Set  functions on the entry boxes</li>
+                        </ol>
+                        <img class="fragment" src="img/lesson3/15.png">
                     </section>
                 </section>
 
                 <section>
                     <section id="lesson_4">
                         <span class="menu-title" style="display: none">Lesson 4 - Light bulb moment?</span>
-                        <h1>Lesson 4</h2>
-                        <h2>Light bulb moment?<h3>
+                        <h1>Lesson 4</h1>
+                        <h2>Light bulb moment?</h2>
+                        <ol>
+                            <li class="fragment">Know how to add images</li>
+                            <li class="fragment">Practice handling button clicks</li>
+                        </ol>
+
+                    </section>
+                    <section>
+                        <h2>Getting started</h2>
+                        <p class="fragment">Start out by creating a GUI with:</p>
+                        <ul>
+                            <li class="fragment">Title – Lights!</li>
+                            <li class="fragment">Two Buttons: On / Off</li>
+                            <li class="fragment">One Button: Exit</li>
+                        </ul>
+                        <p class="fragment">Remember to use addButtons for the first row and addButton for the second. They can both use the same function.</p>
+                        <img class="fragment" src="img/lesson4/1.png">
+                    </section>
+                    <section>
+                        <h2></h2>
+                        <p class="fragment"></p>
+                        <img class="fragment" src="img/lesson4/2.png">
+                    </section>
+                    <section>
+                        <h2></h2>
+                        <p class="fragment"></p>
+                        <img class="fragment" src="img/lesson4/3.png">
+                        <img class="fragment" src="img/lesson4/4.png">
+                    </section>
+                    <section>
+                        <h2></h2>
+                        <p class="fragment"></p>
+                        <img class="fragment" src="img/lesson4/5.png">
+                        <img class="fragment" src="img/lesson4/6.png">
+                    </section>
+                    <section>
+                        <h2>Extensions:</h2>
+                        <ol>
+                            <li class="fragment">Try enabling/disabling buttons at the right time…</li>
+                        </ol>
+                        <img class="fragment" src="img/lesson4/7.png">
                     </section>
                 </section>
 
@@ -184,48 +310,48 @@
                 <section>
                     <section id="lesson_5">
                         <span class="menu-title" style="display: none">Lesson 5 - Magic 8 ball</span>
-                        <h1>Lesson 5</h2>
-                        <h2>Magic 8 ball<h3>
+                        <h1>Lesson 5</h1>
+                        <h2>Magic 8 ball</h2>
                     </section>
                 </section>
 
                 <section>
                     <section id="lesson_6">
                         <span class="menu-title" style="display: none">Lesson 6 - Simple calculator</span>
-                        <h1>Lesson 6</h2>
-                        <h2>Simple calculator<h3>
+                        <h1>Lesson 6</h1>
+                        <h2>Simple calculator</h2>
                     </section>
                 </section>
 
                 <section>
                     <section id="lesson_7">
                         <span class="menu-title" style="display: none">Lesson 7 - Loops</span>
-                        <h1>Lesson 7</h2>
-                        <h2>Loops<h3>
+                        <h1>Lesson 7</h1>
+                        <h2>Loops</h2>
                     </section>
                 </section>
 
                 <section>
                     <section id="lesson_8">
                         <span class="menu-title" style="display: none">Lesson 8 - Noughts & Crosses</span>
-                        <h1>Lesson 8</h2>
-                        <h2>Noughts & Crosses<h3>
+                        <h1>Lesson 8</h1>
+                        <h2>Noughts & Crosses</h2>
                     </section>
                 </section>
 
                 <section>
                     <section id="lesson_9">
                         <span class="menu-title" style="display: none">Lesson 9 - Advanced strings</span>
-                        <h1>Lesson 9</h2>
-                        <h2>Advanced strings<h3>
+                        <h1>Lesson 9</h1>
+                        <h2>Advanced strings</h2>
                     </section>
                 </section>
 
                 <section>
                     <section id="lesson_10">
                         <span class="menu-title" style="display: none">Lesson 10 - Advanced calculator</span>
-                        <h1>Lesson 10</h2>
-                        <h2>Advanced calculator<h3>
+                        <h1>Lesson 10</h1>
+                        <h2>Advanced calculator</h2>
                     </section>
                 </section>
 
