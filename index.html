@@ -64,19 +64,20 @@
                     <section>
                         <h2>Objectives</h2>
                         <ol>
-                            <li class="fragment">Know how to create an empty GUI</li>
-                            <li class="fragment">Know how to add a widget, specifically a label, to a GUI</li>
-                            <li class="fragment">Know how to change the appearance of widgets</li>
+                            <li class="fragment">Know how to create an empty GUI.</li>
+                            <li class="fragment">Know how to add a widget (a label) to a GUI.</li>
+                            <li class="fragment">Know how to change the appearance of widgets.</li>
                         </ol>
                     </section>
                     <section>
                         <h2>Importing the library</h2>
-                        <p class="fragment">First, we need to import the appJar library</p>
+                        <p class="fragment">First, we need to import the appJar library:</p>
                         <img alt="Image" class="fragment" src="img/lesson1/1.png">
+                        <p class="fragment">This gives us access to all the GUI code.</p>
                     </section>
                     <section>
                         <h2>Create a GUI</h2>
-                        <p class="fragment">Next, we create a gui – giving it a name (this will be shown in the title of the GUI)</p>
+                        <p class="fragment">Then, we create the GUI – giving it a title:</p>
                         <p class="fragment">And start it….</p>
                         <img alt="Image" class="fragment" src="img/lesson1/2.png">
                         <img alt="Image" class="fragment" src="img/lesson1/3.png">
@@ -86,44 +87,43 @@
                         <p class="fragment">Right now, this doesn’t look like much.</p>
                         <p class="fragment">We can resize it, minimize, maximize, and close it.</p>
                         <p class="fragment">But it doesn't actually do anything...</p>
-                        <p class="fragment">So, let’s add some stuff to it!</p>
                     </section>
                     <section>
                         <h2>Adding widgets</h2>
-                        <p class="fragment">This must be done before we tell the GUI to start</p>
-                        <p class="fragment">So, let’s add a label:</p>
-                        <p class="fragment">It requires 2 parameters – a title, and some text to show.</p>
-                        <p class="fragment">Titles must be <strong>unique</strong> - they let us get/change widgets later</p>
+                        <p class="fragment">So, let’s add a label...</p>
+                        <p class="fragment">It requires 2 parameters – a <strong>unique</strong> title, and some text:</p>
                         <img alt="Image" class="fragment" src="img/lesson1/4.png">
                         <img alt="Image" class="fragment" src="img/lesson1/5.png">
+                        <p class="fragment">Unique titles let us get or change widgets later.</p>
+                        <p class="fragment"><strong>NB.</strong> all widgets have to be added before you start the GUI!</p>
                     </section>
                     <section>
                         <h2>More widgets</h2>
                         <p class="fragment">We can add more labels, using the same command:</p>
                         <img alt="Image" class="fragment" src="img/lesson1/6.png">
                         <img alt="Image" class="fragment" src="img/lesson1/8.png">
-                        <p class="fragment">As long as each one gets a <strong>unique</strong> title.</p>
+                        <p class="fragment">Just remember to give each one a <strong>unique</strong> title.</p>
                     </section>
                     <section>
                         <h2>GUI settings</h2>
-                        <p class="fragment">We can change the way the GUI looks.</p>
-                        <p class="fragment">By changing the GUI settings – this will modify all widgets in the GUI:</p>
+                        <p class="fragment">We can change certain settings for the whole GUI:</p>
                         <img alt="Image" class="fragment" src="img/lesson1/7.png">
                         <img alt="Image" class="fragment" src="img/lesson1/9.png">
+                        <p class="fragment">This will apply to all widgets in the GUI.</p>
                     </section>
                     <section>
                         <h2>Widget settings</h2>
-                        <p class="fragment">Or, by changing individual widget settings:</p>
+                        <p class="fragment">Or, we can change individual widget settings:</p>
                         <img alt="Image" class="fragment" src="img/lesson1/10.png">
                         <img alt="Image" class="fragment" src="img/lesson1/11.png">
-                        <p class="fragment">Note, we use the widget's title to indicate which widget to change.</p>
+                        <p class="fragment">This is where we need the widgets' <strong>unique</strong> titles.</p>
                     </section>
                     <section>
                         <h2>Extensions:</h2>
                         <ol>
-                            <li class="fragment">Change the FG, BG & font of all the labels</li>
-                            <li class="fragment">Change the starting geometry</li>
-                            <li class="fragment">Change the resizability</li>
+                            <li class="fragment">Change the FG, BG & font of all the labels.</li>
+                            <li class="fragment">Change the starting geometry of the GUI.</li>
+                            <li class="fragment">Change the resizability of the GUI.</li>
                         </ol>
                         <img alt="Image" class="fragment" src="img/lesson1/12.png">
                     </section>
@@ -139,40 +139,48 @@
                     <section>
                         <h2>Objectives</h2>
                         <ol>
-                            <li class="fragment">Know how to add a button and link it to a function</li>
-                            <li class="fragment">Know how to change a label's contents</li>
-                            <li class="fragment">Know how to use global variables to keep track of stuff</li>
+                            <li class="fragment">Know how to add a button and make it interactive.</li>
+                            <li class="fragment">Know how to change a label's contents.</li>
+                            <li class="fragment">Know how to use global variables to keep track of stuff.</li>
                         </ol>
                     </section>
 
                     <section>
                         <h2>Adding a button</h2>
-                        <p class="fragment">Let's add a button to the last GUI</p>
-                        <p class="fragment">We need a <strong>function</strong> to call, when the button is pressed:</p>
-                        <p class="fragment">It must receive one parameter – the name of the button</p>
-                        <p class="fragment">When the button is pressed, the function will be called</p>
-                        <img alt="Image" class="fragment" src="img/lesson2/1.png">
+                        <p class="fragment">Let's add a button to the last GUI:</p>
+                        <img alt="Image" class="fragment" src="img/lesson2/1a.png">
                         <img alt="Image" class="fragment" src="img/lesson2/2.png">
+                        <p class="fragment">Buttons don't need a <strong>unique</strong> title, appJar uses their text.</p>
+                        <p class="fragment"><strong>But</strong>, they do have a special parameter - a function name.</p>
+                    </section>
+
+                    <section>
+                        <h2>Events</h2>
+                        <p class="fragment">GUIs are <strong>event-driven</strong> - whenever you click something, it calls a function (the event).</p>
+                        <p class="fragment">The function will be given a single parameter – the name of the button:</p>
+                        <img alt="Image" class="fragment" src="img/lesson2/1b.png">
+                        <p class="fragment">When you press the button, this function will be called - printing the message.</p>
+                        <p class="fragment"><strong>NB.</strong> you must define the function before adding the button!</p>
                     </section>
                     <section>
                         <h2>Changing a widget</h2>
-                        <p class="fragment">Now that we have a working button, let’s get it to change something on the GUI, instead of printing to the terminal.</p>
-                        <p class="fragment">We can simply set the label’s text to be something new:</p>
+                        <p class="fragment">Now that we have a working button, let’s get it to change something in the GUI instead of printing to the terminal:</p>
                         <img alt="Image" class="fragment" src="img/lesson2/3.png">
                         <img alt="Image" class="fragment" src="img/lesson2/4.png">
+                        <p class="fragment">This is simply changing the text of the specified label ("lb1").</p>
                     </section>
                     <section>
                         <h2>Global variables</h2>
-                        <p class="fragment"><strong>Global variables</strong> allow the GUI to remember things</p>
-                        <p class="fragment">Define them outside of a function, then change them in a function:</p>
+                        <p class="fragment"><strong>Global variables</strong> allow the GUI to remember things.</p>
+                        <p class="fragment">Define them outside of functions, then change them in functions:</p>
                         <img alt="Image" class="fragment" src="img/lesson2/5.png">
                         <img alt="Image" class="fragment" src="img/lesson2/6.png">
                     </section>
                     <section>
                         <h2>Extensions:</h2>
                         <ol>
-                            <li class="fragment">Get the background colour to change every time the button is pressed….</li>
-                            <li class="fragment">Do a countdown, close the window when it reaches 0</li>
+                            <li class="fragment">Get the background colour to change every time a button is pressed.</li>
+                            <li class="fragment">Do a countdown, close the window when it reaches 0.</li>
                         </ol>
                         <img alt="Image" class="fragment" src="img/lesson2/7.png">
                     </section>
